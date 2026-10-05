@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Wisdom Kwame Elorm Azumah, a full-stack developer focused on Java web applications and thoughtful frontend experiences.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050505'/%3E%3C/svg%3E">
+  <title>Wisdom Kwame Elorm Azumah — Full-Stack Developer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <a class="wordmark" href="#top" aria-label="Wisdom Kwame Elorm Azumah, home">WKEA<span>.</span></a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="menu-label">Menu</span>
+      <span class="menu-lines" aria-hidden="true"><i></i><i></i></span>
+    </button>
+
+    <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">I build reliable software experiences from web solutions to mobile applications.</h1>
+        <p>I’m Wisdom Kwame Elorm Azumah, a full-stack developer focused on secure, maintainable software solutions.</p>
+        <div class="hero-actions" aria-label="Portfolio actions">
+          <a class="button button-dark" href="#projects">Explore my work</a>
+          <a class="button button-light" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <img src="assets/wkea.jpg" alt="" width="1122" height="1402">
+      </div>
+
+      <p class="hero-stack" aria-label="Primary technologies">Java <span>/</span> Jakarta EE <span>/</span> Web</p>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About section">
+        <svg viewBox="0 0 24 32" aria-hidden="true"><path d="M12 1v28M4 21l8 8 8-8"/></svg>
+      </a>
+    </section>
+
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="section-heading reveal">
+        <span class="section-number"></span>
+        <span class="section-rule" aria-hidden="true"></span>
+        <h2 id="about-title">About</h2>
+      </div>
+      <div class="about-layout">
+        <p class="about-statement reveal">Thoughtful engineering, built around real users.</p>
+        <div class="about-detail reveal">
+          <p>I work across the full web stack, shaping accessible interfaces and dependable Java backends. My approach values clear architecture,
+             practical security, and software that remains understandable as it grows.</p>
+          <dl class="about-facts">
+            <div>
+              <dt>Focus</dt>
+              <dd>Full-stack web development</dd>
+            </div>
+            <div>
+              <dt>Approach</dt>
+              <dd>Clear, secure, maintainable</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <p class="section-note" aria-hidden="true">Build a more usable web</p>
+    </section>
+
+    <section class="expertise section" id="expertise" aria-labelledby="expertise-title">
+      <div class="expertise-intro reveal">
+        <div class="section-heading section-heading-stacked">
+          <span class="section-number">02</span>
+          <span class="section-rule" aria-hidden="true"></span>
+          <h2 id="expertise-title">Expertise</h2>
+        </div>
+        <p>Building useful software with intention.</p>
+        <div class="technical-mark" aria-hidden="true"></div>
+      </div>
+
+      <div class="expertise-list">
+        <article class="expertise-row reveal" tabindex="0">
+          <span class="expertise-index">01</span>
+          <div>
+            <h3>Backend Engineering</h3>
+            <p>Java 17+, Jakarta Servlets, REST-style APIs, JDBC and MySQL.</p>
+          </div>
+          <svg class="row-arrow" viewBox="0 0 48 24" aria-hidden="true"><path d="M1 12h44M34 2l11 10-11 10"/></svg>
+        </article>
+        <article class="expertise-row reveal" tabindex="0">
+          <span class="expertise-index">02</span>
+          <div>
+            <h3>Frontend Development</h3>
+            <p>Responsive interfaces using semantic HTML, modern CSS and vanilla JavaScript.</p>
+          </div>
+          <svg class="row-arrow" viewBox="0 0 48 24" aria-hidden="true"><path d="M1 12h44M34 2l11 10-11 10"/></svg>
+        </article>
+        <article class="expertise-row reveal" tabindex="0">
+          <span class="expertise-index">03</span>
+          <div>
+            <h3>Quality &amp; Security</h3>
+            <p>Validation, session-based authentication, safe database access, logging and automated testing.</p>
+          </div>
+          <svg class="row-arrow" viewBox="0 0 48 24" aria-hidden="true"><path d="M1 12h44M34 2l11 10-11 10"/></svg>
+        </article>
+      </div>
+    </section>
+
+    <section class="projects section" id="projects" aria-labelledby="projects-title">
+      <div class="projects-heading reveal">
+        <div class="section-heading">
+          <span class="section-number">03</span>
+          <span class="section-rule" aria-hidden="true"></span>
+          <h2 id="projects-title">Projects</h2>
+        </div>
+        <p>Ideas shaped into useful things for real people.</p>
+      </div>
+
+      <article class="project project-light reveal">
+        <span class="project-index">01</span>
+        <div class="project-copy">
+          <h3>BookLib</h3>
+          <p>A free online book library being built with a vanilla frontend, Jakarta Servlets, Tomcat and MySQL.</p>
+          <div class="project-extra" id="booklib-details" hidden>
+            <p><strong>Current direction</strong> — a straightforward reading platform with a Maven-based Java web stack.</p>
+          </div>
+        </div>
+        <button class="text-link project-toggle" type="button" aria-expanded="false" aria-controls="booklib-details">
+          <span>View details</span>
+          <svg viewBox="0 0 28 16" aria-hidden="true"><path d="M1 8h24M18 1l7 7-7 7"/></svg>
+        </button>
+      </article>
+
+      <article class="project project-dark reveal">
+        <span class="project-index">02</span>
+        <div class="project-copy">
+          <h3>Fresh Farms</h3>
+          <p>A Ghana-focused agriculture marketplace concept connecting farmers and buyers, with mobile-money payment flows in scope.</p>
+          <div class="project-extra" id="fresh-farms-details" hidden>
+            <p><strong>Current direction</strong> — secure marketplace flows across products, carts, orders and mobile payments.</p>
+          </div>
+        </div>
+        <button class="text-link project-toggle" type="button" aria-expanded="false" aria-controls="fresh-farms-details">
+          <span>View details</span>
+          <svg viewBox="0 0 28 16" aria-hidden="true"><path d="M1 8h24M18 1l7 7-7 7"/></svg>
+        </button>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="contact-callout reveal">
+      <h2>Have a project in mind?<br>Let’s talk.</h2>
+      <div class="email-block">
+        <svg viewBox="0 0 40 32" aria-hidden="true"><path d="M1 1h38v30H1zM2 3l18 15L38 3"/></svg>
+        <div>
+          <span>Email</span>
+          <p><a href="mailto:wisdomazumah1784@gmail.com">wisdomazumah1784@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-base">
+      <p>© 2026 Wisdom Kwame Elorm Azumah</p>
+      <nav aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
