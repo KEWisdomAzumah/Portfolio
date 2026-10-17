@@ -1,181 +1,324 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Wisdom Kwame Elorm Azumah, a full-stack developer focused on Java web applications and thoughtful frontend experiences.">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050505'/%3E%3C/svg%3E">
-  <title>Wisdom Kwame Elorm Azumah — Full-Stack Developer</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-
-  <header class="site-header" id="top">
-    <a class="wordmark" href="#top" aria-label="Wisdom Kwame Elorm Azumah, home">WKEA<span>.</span></a>
-
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
-      <span class="menu-label">Menu</span>
-      <span class="menu-lines" aria-hidden="true"><i></i><i></i></span>
-    </button>
-
-    <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main id="main-content">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <h1 id="hero-title">I build reliable software experiences from web solutions to mobile applications.</h1>
-        <p>I’m Wisdom Kwame Elorm Azumah, a full-stack developer focused on secure, maintainable software solutions.</p>
-        <div class="hero-actions" aria-label="Portfolio actions">
-          <a class="button button-dark" href="#projects">Explore my work</a>
-          <a class="button button-light" href="#contact">Get in touch</a>
-        </div>
-      </div>
-
-      <div class="hero-art" aria-hidden="true">
-        <img src="assets/wkea.jpg" alt="" width="1122" height="1402">
-      </div>
-
-      <p class="hero-stack" aria-label="Primary technologies">Java <span>/</span> Jakarta EE <span>/</span> Web</p>
-      <a class="scroll-cue" href="#about" aria-label="Scroll to About section">
-        <svg viewBox="0 0 24 32" aria-hidden="true"><path d="M12 1v28M4 21l8 8 8-8"/></svg>
-      </a>
-    </section>
-
-    <section class="about section" id="about" aria-labelledby="about-title">
-      <div class="section-heading reveal">
-        <span class="section-number"></span>
-        <span class="section-rule" aria-hidden="true"></span>
-        <h2 id="about-title">About</h2>
-      </div>
-      <div class="about-layout">
-        <p class="about-statement reveal">Thoughtful engineering, built around real users.</p>
-        <div class="about-detail reveal">
-          <p>I work across the full web stack, shaping accessible interfaces and dependable Java backends. My approach values clear architecture,
-             practical security, and software that remains understandable as it grows.</p>
-          <dl class="about-facts">
-            <div>
-              <dt>Focus</dt>
-              <dd>Full-stack web development</dd>
-            </div>
-            <div>
-              <dt>Approach</dt>
-              <dd>Clear, secure, maintainable</dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-      <p class="section-note" aria-hidden="true">Build a more usable web</p>
-    </section>
-
-    <section class="expertise section" id="expertise" aria-labelledby="expertise-title">
-      <div class="expertise-intro reveal">
-        <div class="section-heading section-heading-stacked">
-          <span class="section-number">02</span>
-          <span class="section-rule" aria-hidden="true"></span>
-          <h2 id="expertise-title">Expertise</h2>
-        </div>
-        <p>Building useful software with intention.</p>
-        <div class="technical-mark" aria-hidden="true"></div>
-      </div>
-
-      <div class="expertise-list">
-        <article class="expertise-row reveal" tabindex="0">
-          <span class="expertise-index">01</span>
-          <div>
-            <h3>Backend Engineering</h3>
-            <p>Java 17+, Jakarta Servlets, REST-style APIs, JDBC and MySQL.</p>
-          </div>
-          <svg class="row-arrow" viewBox="0 0 48 24" aria-hidden="true"><path d="M1 12h44M34 2l11 10-11 10"/></svg>
-        </article>
-        <article class="expertise-row reveal" tabindex="0">
-          <span class="expertise-index">02</span>
-          <div>
-            <h3>Frontend Development</h3>
-            <p>Responsive interfaces using semantic HTML, modern CSS and vanilla JavaScript.</p>
-          </div>
-          <svg class="row-arrow" viewBox="0 0 48 24" aria-hidden="true"><path d="M1 12h44M34 2l11 10-11 10"/></svg>
-        </article>
-        <article class="expertise-row reveal" tabindex="0">
-          <span class="expertise-index">03</span>
-          <div>
-            <h3>Quality &amp; Security</h3>
-            <p>Validation, session-based authentication, safe database access, logging and automated testing.</p>
-          </div>
-          <svg class="row-arrow" viewBox="0 0 48 24" aria-hidden="true"><path d="M1 12h44M34 2l11 10-11 10"/></svg>
-        </article>
-      </div>
-    </section>
-
-    <section class="projects section" id="projects" aria-labelledby="projects-title">
-      <div class="projects-heading reveal">
-        <div class="section-heading">
-          <span class="section-number">03</span>
-          <span class="section-rule" aria-hidden="true"></span>
-          <h2 id="projects-title">Projects</h2>
-        </div>
-        <p>Ideas shaped into useful things for real people.</p>
-      </div>
-
-      <article class="project project-light reveal">
-        <span class="project-index">01</span>
-        <div class="project-copy">
-          <h3>BookLib</h3>
-          <p>A free online book library being built with a vanilla frontend, Jakarta Servlets, Tomcat and MySQL.</p>
-          <div class="project-extra" id="booklib-details" hidden>
-            <p><strong>Current direction</strong> — a straightforward reading platform with a Maven-based Java web stack.</p>
-          </div>
-        </div>
-        <button class="text-link project-toggle" type="button" aria-expanded="false" aria-controls="booklib-details">
-          <span>View details</span>
-          <svg viewBox="0 0 28 16" aria-hidden="true"><path d="M1 8h24M18 1l7 7-7 7"/></svg>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Wisdom Kwame Elorm Azumah — software developer building practical software with Java and PHP."/>
+    <meta name="theme-color" content="#ffffff" />
+    <title>Wisdom Azumah | Software Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+      <nav class="container nav-bar" aria-label="Primary navigation">
+        <a class="logo" href="#home">
+          Wisdom Azumah
+          <span>.</span>
+        </a>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
         </button>
-      </article>
-
-      <article class="project project-dark reveal">
-        <span class="project-index">02</span>
-        <div class="project-copy">
-          <h3>Fresh Farms</h3>
-          <p>A Ghana-focused agriculture marketplace concept connecting farmers and buyers, with mobile-money payment flows in scope.</p>
-          <div class="project-extra" id="fresh-farms-details" hidden>
-            <p><strong>Current direction</strong> — secure marketplace flows across products, carts, orders and mobile payments.</p>
-          </div>
+        <div class="nav-links" id="nav-links">
+          <a href="#home" aria-current="page">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#tools">Tools</a>
+          <a href="#contact">Contact</a>
         </div>
-        <button class="text-link project-toggle" type="button" aria-expanded="false" aria-controls="fresh-farms-details">
-          <span>View details</span>
-          <svg viewBox="0 0 28 16" aria-hidden="true"><path d="M1 8h24M18 1l7 7-7 7"/></svg>
-        </button>
-      </article>
-    </section>
-  </main>
-
-  <footer class="site-footer" id="contact">
-    <div class="contact-callout reveal">
-      <h2>Have a project in mind?<br>Let’s talk.</h2>
-      <div class="email-block">
-        <svg viewBox="0 0 40 32" aria-hidden="true"><path d="M1 1h38v30H1zM2 3l18 15L38 3"/></svg>
-        <div>
-          <span>Email</span>
-          <p><a href="mailto:wisdomazumah1784@gmail.com">wisdomazumah1784@gmail.com</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-base">
-      <p>© 2026 Wisdom Kwame Elorm Azumah</p>
-      <nav aria-label="Footer navigation">
-        <a href="#about">About</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#projects">Projects</a>
       </nav>
-    </div>
-  </footer>
-</body>
+    </header>
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <h1>
+              Hey! I’m
+              <br />
+              <span>Wisdom Azumah</span>
+            </h1>
+            <p class="hero-role">Software Developer</p>
+            <p class="hero-description">
+              I build software for practical problems.
+            </p>
+            <p class="hero-note">
+              Java &amp; PHP backends. Agriculture systems. Software tools.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#projects">
+                Explore my work
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 12h16m-6-6 6 6-6 6" />
+                </svg>
+              </a>
+              <a
+                class="social"
+                href="https://github.com/KEWisdomAzumah/"
+                aria-label="GitHub profile"
+              >
+                <svg viewBox="0 0 24 24" class="filled">
+                  <path
+                    d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.77c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+                  />
+                </svg>
+              </a>
+              <a
+                class="social"
+                href="mailto:wisdomazumah1784@gmail.com"
+                aria-label="Send email"
+              >
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="5" width="18" height="14" />
+                  <path d="m3 6 9 7 9-7" />
+                </svg>
+              </a>
+              <a class="more-link" href="#about">
+                More about me
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 12h16m-6-6 6 6-6 6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <img
+            class="portrait"
+            src="assets/wkea.jpg"
+            alt="Wisdom Kwame Elorm Azumah"
+            width="250"
+            height="250"
+          />
+        </div>
+      </section>
+      <section class="projects container" id="projects">
+        <div class="section-heading">
+          <h2>Featured Projects</h2>
+          <a class="more-link" href="https://github.com/KEWisdomAzumah/">
+            View GitHub
+            <svg viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10" /></svg>
+          </a>
+        </div>
+        <div class="filters" aria-label="Filter projects">
+          <button aria-pressed="true" data-filter="all">
+            All projects
+            <span>3</span>
+          </button>
+          <button aria-pressed="false" data-filter="web">
+            Web applications
+            <span>2</span>
+          </button>
+          <button aria-pressed="false" data-filter="language">
+            Language tools
+            <span>1</span>
+          </button>
+        </div>
+        <div class="project-grid">
+          <article class="project featured" data-category="web">
+            <div class="project-cover book-cover" aria-hidden="true">
+              <span class="cover-symbol">{ B }</span>
+              <strong>
+                BookLib
+                <span>THE ONLINE BOOK LIBRARY</span>
+              </strong>
+              <span class="cover-caption">
+                A little curiosity. A whole library.
+              </span>
+            </div>
+            <div class="project-content">
+              <h3>BookLib</h3>
+              <p class="project-type">Web application · In development</p>
+              <p>
+                A free online book library built with a vanilla frontend and a
+                Java backend. A straightforward reading platform powered by
+                Jakarta Servlets, Tomcat and MySQL.
+              </p>
+              <div class="tags">
+                <span>Java</span>
+                <span>Jakarta Servlets</span>
+                <span>MySQL</span>
+              </div>
+              <details>
+                <summary>
+                  View details
+                  <span aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  A Maven-based Java web project combining a lightweight
+                  frontend with server-side application logic and a relational
+                  database.
+                </p>
+              </details>
+            </div>
+          </article>
+          <article class="project" data-category="web">
+            <div class="project-cover farm-cover" aria-hidden="true">
+              <span class="cover-symbol">/ / /</span>
+              <strong>
+                FRESHFARM
+                <span>SOFTWARE FOR AGRICULTURE</span>
+              </strong>
+              <span class="cover-caption">
+                Rooted in Ghana. Built with purpose.
+              </span>
+            </div>
+            <div class="project-content">
+              <h3>FRESHFARM</h3>
+              <p class="project-type">Agriculture systems</p>
+              <p>
+                An agriculture software project focused on Ghana. Part of my
+                ongoing work to change how we approach agriculture through
+                practical software.
+              </p>
+              <div class="tags">
+                <span>Agriculture</span>
+                <span>Software systems</span>
+              </div>
+              <details>
+                <summary>
+                  View details
+                  <span aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  My current focus is building a system aimed at improving how
+                  we approach agriculture in Ghana.
+                </p>
+              </details>
+            </div>
+          </article>
+          <article class="project" data-category="language">
+            <div class="project-cover language-cover" aria-hidden="true">
+              <span class="cover-symbol">&gt;_</span>
+              <strong>
+                GHSL
+                <span>THE INTERPRETER</span>
+              </strong>
+              <span class="cover-caption">From language to logic.</span>
+            </div>
+            <div class="project-content">
+              <h3>GHSL Interpreter</h3>
+              <p class="project-type">Language tools</p>
+              <p>
+                A language tool that reflects my work beyond web applications,
+                exploring the foundations of how software interprets and
+                executes instructions.
+              </p>
+              <div class="tags">
+                <span>Interpreter development</span>
+                <span>Language tools</span>
+              </div>
+              <details>
+                <summary>
+                  View details
+                  <span aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  The GHSL interpreter is one of the software tools I’ve built
+                  and am working on alongside my web and agriculture projects.
+                </p>
+              </details>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="container about" id="about">
+        <h2>About Me</h2>
+        <div class="about-columns">
+          <p>
+            I’m Wisdom Kwame Elorm Azumah, a software developer with a strong
+            backend foundation. I enjoy turning practical problems into
+            purposeful software.
+          </p>
+          <p>
+            Java and PHP are my strongest backend languages. My work spans
+            agriculture systems in Ghana and software tools, including FRESHFARM
+            and the GHSL interpreter.
+          </p>
+        </div>
+      </section>
+      <section class="container tools" id="tools">
+        <h2>Tools I Work With</h2>
+        <p>Technologies I use to build, learn, and solve problems.</p>
+        <div class="tool-list">
+          <span>Java</span>
+          <span>PHP</span>
+          <span>MySQL</span>
+          <span>JavaScript</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>Tomcat</span>
+          <span>Maven</span>
+        </div>
+      </section>
+      <section class="dashboard" id="contact">
+        <div class="container dashboard-grid">
+          <div class="dash-card">
+            <h3>Appearance</h3>
+            <p>Make yourself at home.</p>
+            <div class="theme-modes" aria-label="Color theme">
+              <button data-theme="light" aria-pressed="true">Light</button>
+              <button data-theme="dark" aria-pressed="false">Dark</button>
+            </div>
+            <div class="swatches" aria-label="Accent color">
+              <button
+                data-accent="default"
+                aria-label="Black accent"
+                aria-pressed="true"
+              ></button>
+              <button
+                data-accent="blue"
+                aria-label="Blue accent"
+                aria-pressed="false"
+              ></button>
+              <button
+                data-accent="green"
+                aria-label="Green accent"
+                aria-pressed="false"
+              ></button>
+              <button
+                data-accent="violet"
+                aria-label="Violet accent"
+                aria-pressed="false"
+              ></button>
+            </div>
+          </div>
+          <div class="dash-card contact">
+            <h3>Let’s build something.</h3>
+            <p>Have a project in mind? Let’s talk.</p>
+            <a href="mailto:wisdomazumah1784@gmail.com">
+              wisdomazumah1784@gmail.com
+            </a>
+            <a href="https://github.com/KEWisdomAzumah/">
+              GitHub · KEWisdomAzumah
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="dash-card">
+            <h3>Current Focus</h3>
+            <span class="focus-label">
+              <i></i>
+              Agriculture systems
+            </span>
+            <p>
+              Building software aimed at changing how we approach agriculture in
+              Ghana.
+            </p>
+            <a class="more-link" href="#projects">
+              Explore the projects
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="container">
+      <p>© 2026 Wisdom Kwame Elorm Azumah</p>
+      <a href="#home">Back to top ↑</a>
+    </footer>
+  </body>
 </html>

@@ -1,56 +1,86 @@
-const menuButton = document.querySelector('.menu-toggle');
-const navigation = document.querySelector('.site-nav');
-const navigationLinks = [...document.querySelectorAll('.site-nav a')];
-
+const menu = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-links");
 function closeMenu() {
-  menuButton.setAttribute('aria-expanded', 'false');
-  navigation.classList.remove('is-open');
-  document.body.classList.remove('menu-open');
+  menu.setAttribute("aria-expanded", "false");
+  nav.classList.remove("is-open");
 }
-
-menuButton.addEventListener('click', () => {
-  const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-expanded', String(!isOpen));
-  navigation.classList.toggle('is-open', !isOpen);
-  document.body.classList.toggle('menu-open', !isOpen);
+menu.addEventListener("click", () => {
+  const open = menu.getAttribute("aria-expanded") !== "true";
+  menu.setAttribute("aria-expanded", String(open));
+  nav.classList.toggle("is-open", open);
 });
-
-navigationLinks.forEach((link) => link.addEventListener('click', closeMenu));
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') closeMenu();
+nav
+  .querySelectorAll("a")
+  .forEach((link) => link.addEventListener("click", closeMenu));
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menu.getAttribute("aria-expanded") === "true") {
+    closeMenu();
+    menu.focus();
+  }
 });
-
-document.querySelectorAll('.project-toggle').forEach((button) => {
-  button.addEventListener('click', () => {
-    const details = document.getElementById(button.getAttribute('aria-controls'));
-    const expanded = button.getAttribute('aria-expanded') === 'true';
-    button.setAttribute('aria-expanded', String(!expanded));
-    button.querySelector('span').textContent = expanded ? 'View details' : 'Hide details';
-    details.hidden = expanded;
-  });
+window.matchMedia("(min-width: 541px)").addEventListener("change", (event) => {
+  if (event.matches) closeMenu();
 });
-
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
-
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    navigationLinks.forEach((link) => {
-      const isCurrent = link.getAttribute('href') === `#${entry.target.id}`;
-      if (isCurrent) link.setAttribute('aria-current', 'true');
-      else link.removeAttribute('aria-current');
+document.querySelectorAll("[data-filter]").forEach((button) =>
+  button.addEventListener("click", () => {
+    document
+      .querySelectorAll("[data-filter]")
+      .forEach((item) =>
+        item.setAttribute("aria-pressed", String(item === button)),
+      );
+    document.querySelectorAll("[data-category]").forEach((project) => {
+      project.hidden =
+        button.dataset.filter !== "all" &&
+        project.dataset.category !== button.dataset.filter;
     });
-  });
-}, { rootMargin: '-35% 0px -55%', threshold: 0 });
-
-document.querySelectorAll('main section[id], footer[id]').forEach((section) => sectionObserver.observe(section));
+  }),
+);
+function preference(key, value) {
+  document.body.dataset[key] = value;
+  document
+    .querySelectorAll(`button[data-${key}]`)
+    .forEach((button) =>
+      button.setAttribute(
+        "aria-pressed",
+        String(button.dataset[key] === value),
+      ),
+    );
+  try {
+    localStorage.setItem(`portfolio-${key}`, value);
+  } catch {}
+  document.querySelector('meta[name="theme-color"]').content =
+    document.body.dataset.theme === "dark" ? "#09090b" : "#ffffff";
+}
+for (const [key, values, fallback] of [
+  ["theme", ["light", "dark"], "light"],
+  ["accent", ["default", "blue", "green", "violet"], "default"],
+]) {
+  let saved;
+  try {
+    saved = localStorage.getItem(`portfolio-${key}`);
+  } catch {}
+  preference(key, values.includes(saved) ? saved : fallback);
+  document
+    .querySelectorAll(`button[data-${key}]`)
+    .forEach((button) =>
+      button.addEventListener("click", () =>
+        preference(key, button.dataset[key]),
+      ),
+    );
+}
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      nav.querySelectorAll("a").forEach((link) => {
+        if (link.hash === `#${entry.target.id}`)
+          link.setAttribute("aria-current", "page");
+        else link.removeAttribute("aria-current");
+      });
+    });
+  },
+  { rootMargin: "-10% 0px -60% 0px" },
+);
+document
+  .querySelectorAll("section[id]")
+  .forEach((section) => observer.observe(section));
